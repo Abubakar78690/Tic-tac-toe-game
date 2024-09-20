@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1D1E2C;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #FFF;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: #F5A623;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+#container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+    background: #292A44;
+    border-radius: 1.5rem;
+    padding: 1.5vmin;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.box {
+    width: 18vmin;
+    height: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    background-color: #3F3D56;
+    font-size: 8vmin;
+    color: #F5A623;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.box:hover {
+    transform: scale(1.1);
+    background-color: #F5A623;
+    color: #292A44;
+}
+
+#reset, #newGame {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #F5A623;
+    color: #1D1E2C;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+#reset:hover, #newGame:hover {
+    background-color: #FF5733;
+}
+
+#msg {
+    color: #F5A623;
+    font-size: 5vmin;
+    font-weight: bolder;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.msg_container {
+    height: 100vmin;  
+    display: flex;
+    flex-wrap: wrap;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    #game {
+        height: 80vmin;
+        width: 80vmin;
+    }
+
+    .box {
+        width: 24vmin;
+        height: 24vmin;
+        font-size: 6vmin;
+    }
+
+    #reset, #newGame {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #game {
+        height: 90vmin;
+        width: 90vmin;
+    }
+
+    .box {
+        width: 28vmin;
+        height: 28vmin;
+        font-size: 5vmin;
+    }
+
+    #reset, #newGame {
+        font-size: 0.9rem;
+    }
+
+    #msg {
+        font-size: 4vmin;
+    }
+}
